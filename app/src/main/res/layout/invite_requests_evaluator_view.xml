@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    android:elevation="90dp"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:background="@color/lightblue_white"
+        android:gravity="center"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="Contest title: "
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/darkblue"
+                    android:textSize="12dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/contest_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="7dp"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/darkblue"
+                    android:textSize="12dp"
+
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider20"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="20dp"
+                android:alpha=".5"
+                android:background="@color/lightblue_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="Description:"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/darkblue"
+                    android:textSize="12dp"
+
+                    />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/description_contest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:lines="3"
+                android:maxLines="3"
+                android:textSize="12dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/darkblue"
+                />
+
+            </LinearLayout>
+            <View
+                android:id="@+id/divider21"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_height="1dp"
+                android:alpha=".5"
+                android:background="@color/lightblue_middle" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:text="Creator: "
+                    android:layout_weight="0.2"
+                    android:fontFamily="@font/bold"
+                    android:textColor="@color/darkblue"
+                    android:textSize="12dp"
+
+                    />
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/creator_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/darkblue"
+                />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/divider22"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:alpha=".5"
+            android:background="@color/lightblue_middle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:text="Status"
+
+                android:fontFamily="@font/bold"
+                android:textColor="@color/darkblue"
+                android:textSize="12dp"
+
+                />
+            <TextView
+
+                android:id="@+id/status_of_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:textSize="12dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/darkblue"
+                />
+            <Button
+                android:id="@+id/manage_request"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="5dp"
+
+                android:background="@drawable/button"
+                android:fontFamily="@font/bold"
+                android:text="Manage"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                app:backgroundTint="@color/darkblue_1" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

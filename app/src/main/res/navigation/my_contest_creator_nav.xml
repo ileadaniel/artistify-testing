@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_contest_creator_nav"
+    app:startDestination="@id/contestsContCreatorFragment">
+
+    <fragment
+        android:id="@+id/contestsContCreatorFragment"
+        android:name="com.example.artistify.ContestCreator.ContestsContCreatorFragment"
+        android:label="fragment_contests_cont_creator"
+        tools:layout="@layout/fragment_contests_cont_creator" />
+    <fragment
+        android:id="@+id/exhibitionsContCreatorFragment"
+        android:name="com.example.artistify.ContestCreator.ExhibitionsContCreatorFragment"
+        android:label="fragment_exhibitions_cont_creator"
+        tools:layout="@layout/fragment_exhibitions_cont_creator" />
+    <fragment
+        android:id="@+id/profileContCreatorFragment"
+        android:name="com.example.artistify.ContestCreator.ProfileContCreatorFragment"
+        android:label="fragment_profile_cont_creator"
+        tools:layout="@layout/fragment_profile_cont_creator" />
+</navigation>

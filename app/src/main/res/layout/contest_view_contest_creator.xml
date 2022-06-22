@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    app:cardCornerRadius="5dp"
+    android:elevation="90dp"
+    android:layout_margin="8dp"
+    android:id="@+id/card_view_contests_created">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/darkblue_1"
+        android:gravity="center_horizontal"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            >
+            <ImageView
+                android:id="@+id/contest_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/ic_exhibitions" />
+            <ProgressBar
+                android:id="@+id/progress_image_loader"
+                android:layout_margin="30sp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/darkblue_1"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/editTextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="46sp"
+                android:gravity="center"
+                android:background="@drawable/title_field"
+                android:layout_margin="3dp"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:textSize="18sp"
+                android:hint="Contest title - tap to edit"
+                android:inputType="text"
+                android:textColor="@color/darkblue"
+                android:textColorHint="@color/darkblue"
+                />
+
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                android:background="@drawable/title_field"
+                android:ems="10"
+                android:fontFamily="@font/regular"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:maxLength="64"
+                android:hint="Description - tap to edit"
+                android:inputType="textMultiLine"
+                android:lines="2"
+                android:minLines="2"
+                android:textColor="@color/darkblue"
+                android:textColorHint="@color/darkblue" />
+
+            <LinearLayout
+                android:layout_height="70dp"
+                android:layout_width="fill_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/title_field"
+                android:orientation="horizontal"
+
+
+                >
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+                    android:background="@drawable/title_field"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Category"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue"
+
+                        />
+                    <Spinner
+                        android:id="@+id/category_selected"
+                        android:layout_width="match_parent"
+                        style="@android:style/Widget.Spinner.DropDown"
+                        android:visibility="gone"
+                        android:layout_height="25dp"
+                        android:layout_margin="5dp"
+                        android:spinnerMode="dropdown"
+                        android:background="@drawable/spinner_layout_contest_c"
+                        android:textColor="@color/darkblue"
+                        android:theme="@style/ThemeOverlay.AppCompat.Light"
+                        />
+
+                    <TextView
+                        android:id="@+id/category_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_margin="5dp"
+                        android:paddingLeft="5dp"
+                        android:gravity="center"
+                        android:textColor="@color/darkblue"
+                        android:hint="Category"
+                        android:textColorHint="@color/darkblue_1"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="0.7"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+                    android:background="@drawable/title_field"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Status"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue"
+                        />
+                    <TextView
+                        android:id="@+id/contest_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+
+                        android:textSize="15sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/title_field"
+
+                android:gravity="center"
+
+                >
+
+                <LinearLayout
+                    android:layout_weight="0.7"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+                    android:background="@drawable/button_dark"
+
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+
+                    >
+                    <Button
+                        android:id="@+id/more_info_contest_created"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:padding="0dp"
+                        android:text="More info"
+                        android:textSize="12sp"
+                        android:shadowColor="@color/darkblue"
+                        app:backgroundTint="@color/darkblue"
+                        android:background="@color/darkblue"
+                        android:textColor="@color/lightblue_white"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:background="@drawable/title_field"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+
+                    >
+
+                    <Button
+                        android:id="@+id/update_contest_created"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:padding="0dp"
+                        android:background="@color/lightblue_1"
+                        app:backgroundTint="@color/lightblue_1"
+                        android:gravity="center"
+                        android:shadowColor="@color/lightblue_1"
+                        android:text="Update contest"
+                        android:textSize="12sp"
+                        android:textColor="@color/darkblue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:padding="3dp"
+                    android:background="@drawable/title_field"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/linear_edit_contest"
+                    >
+
+                    <ImageButton
+            android:id="@+id/edit_contest_created"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/lightblue_1"
+            app:srcCompat="@drawable/edit_button" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:padding="3dp"
+                    android:background="@drawable/title_field"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/linear_delete_contest"
+                    >
+
+                    <ImageButton
+                        android:id="@+id/delete_contest_created"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.1"
+                        android:background="@color/lightblue_1"
+                        app:srcCompat="@drawable/delete_contest" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/expandable_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/lightblue_1"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.9"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|end"
+                    android:text="Time left :"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/time_left_contest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|left"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="18sp"
+
+                    />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider24"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="7dp"
+                android:alpha=".2"
+                android:background="@color/lightblue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Contest start:"
+                        android:textColor="@color/darkblue" />
+
+                    <TextView
+                        android:id="@+id/contest_start_time_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue" />
+
+                    <ImageView
+                        android:id="@+id/pick_contest_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        app:srcCompat="@drawable/edit_calendar" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider20"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="7dp"
+                    android:alpha=".2"
+                    android:background="@color/lightblue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Contest end:"
+                        android:textColor="@color/darkblue" />
+
+                    <TextView
+                        android:id="@+id/contest_end_time_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue" />
+
+                    <ImageView
+                        android:id="@+id/pick_contest_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        app:srcCompat="@drawable/edit_calendar" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider21"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="7dp"
+                    android:alpha=".2"
+                    android:background="@color/lightblue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Evaluation duration:"
+                        android:textColor="@color/darkblue" />
+
+                    <TextView
+                        android:id="@+id/contest_evaluation_duration_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue" />
+
+                    <ImageView
+                        android:id="@+id/pick_evaluation_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        app:srcCompat="@drawable/time_and_duration" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider22"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="7dp"
+                    android:alpha=".2"
+                    android:background="@color/lightblue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:fontFamily="@font/bold"
+                        android:text="Appeals duration:"
+                        android:textColor="@color/darkblue" />
+
+                    <TextView
+                        android:id="@+id/contest_appeals_duration_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue" />
+
+                    <ImageView
+                        android:id="@+id/pick_appeals_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="7dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        app:srcCompat="@drawable/time_and_duration" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divider18"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="7dp"
+                android:background="@color/lightblue_middle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Evaluators"
+                android:textColor="@color/darkblue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/info_evaluator_selection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center|start"
+                android:text="Important! You have to select at least three evaluators and appeals evaluators for your contest."
+                android:textColor="@color/darkblue_1"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Contest evaluator 1:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/contest_accepted_evaluator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Contest evaluator 2:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/contest_accepted_evaluator2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Contest evaluator 3:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/contest_accepted_evaluator3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Appeals evaluator 1:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/contest_accepted_appeals_evaluator1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Appeals evaluator 2:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/contest_accepted_appeals_evaluator2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Appeals evaluator 3:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/contest_accepted_appeals_evaluator3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_evaluator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center|start"
+                android:text="To view or select new evaluator(s) click below."
+                android:textColor="@color/darkblue_1"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/select_new_evaluator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/darkblue"
+                android:shadowColor="@color/darkblue"
+                android:text="Select/view evaluator(s)"
+                android:textColor="@color/lightblue_white" />
+
+            <View
+                android:id="@+id/divider19"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightblue_middle" />
+
+            <LinearLayout
+                android:id="@+id/linear_entries_contest_creator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Entries"
+                    android:textColor="@color/darkblue"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:fontFamily="@font/bold"
+                                android:gravity="center|start"
+                                android:text="Number of entries:"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/entries_number_contest_creator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:fontFamily="@font/bold"
+                                android:gravity="center|start"
+                                android:textColor="@color/darkblue_1"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/view_entries_contest_creator"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:shadowColor="@color/darkblue"
+                                android:text="View entries"
+                                android:textColor="@color/lightblue_white"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/darkblue" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:id="@+id/divider29"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:background="@color/lightblue_middle" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:fontFamily="@font/bold"
+                                android:gravity="center|start"
+                                android:text="Number of reports:"
+                                android:textColor="@color/darkblue"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/reports_number_contest_creator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+
+                                android:fontFamily="@font/bold"
+                                android:gravity="center|start"
+                                android:textColor="@color/darkblue_1"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/view_reports_contest_creator"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:shadowColor="@color/darkblue"
+                                android:text="View reports"
+                                android:textColor="@color/lightblue_white"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/darkblue" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/view_users_vote_rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:shadowColor="@color/darkblue"
+                        android:text="View vote rank"
+                        android:textColor="@color/lightblue_white"
+                        android:textSize="12sp"
+                        app:backgroundTint="@color/darkblue" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

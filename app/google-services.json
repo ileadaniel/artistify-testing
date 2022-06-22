@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1005481204944",
+    "firebase_url": "https://artistify-2f529-default-rtdb.firebaseio.com",
+    "project_id": "artistify-2f529",
+    "storage_bucket": "artistify-2f529.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005481204944:android:30325c38015ff4632292d5",
+        "android_client_info": {
+          "package_name": "com.example.artistify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005481204944-jg25lmm8l0ahb33g29akq7pqds8ff20h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxeGAXCUeKYR1R0CM99jIwEqx71uNSIj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005481204944-jg25lmm8l0ahb33g29akq7pqds8ff20h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

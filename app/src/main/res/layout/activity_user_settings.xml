@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightblue_1"
+    tools:context=".UserSettings">
+
+    <LinearLayout
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/darkblue"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+
+        <ImageView
+            android:layout_marginTop="8dp"
+            android:id="@+id/imageView11"
+            android:layout_width="31dp"
+            android:layout_height="34dp"
+            app:srcCompat="@drawable/ic_logo_icon_01" />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/a_bold"
+            android:text="Artistify"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+           />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Profile data"
+        android:alpha=".7"
+        android:background="@color/lightblue_2"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:textColor="@color/darkblue"
+        android:textSize="24sp"
+        />
+
+    <View
+
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="Full name:"
+        android:textColor="@color/darkblue"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/darkblue"
+
+
+        android:textColorHint="@color/darkblue_1"
+        />
+    <View
+
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="Email address:"
+        android:textColor="@color/darkblue"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:id="@+id/editTextTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/darkblue"
+
+
+        android:textColorHint="@color/darkblue_1"
+        />
+
+    <View
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+    <Button
+        android:id="@+id/update_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/darkblue"
+        android:textSize="18sp"
+        android:text="update"
+        android:backgroundTint="@color/lightblue_1"
+        android:outlineSpotShadowColor="@color/lightblue_1"
+        />
+
+    <View
+
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+
+
+
+
+    <Button
+        android:id="@+id/change_profile_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/darkblue"
+        android:textSize="18sp"
+        android:text="change profile picture"
+        android:backgroundTint="@color/lightblue_1"
+        android:outlineSpotShadowColor="@color/lightblue_1"
+        />
+
+    <View
+
+        android:id="@+id/divider8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+
+
+
+    <Button
+        android:id="@+id/change_cover_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/darkblue"
+        android:textSize="18sp"
+        android:text="change cover picture"
+        android:backgroundTint="@color/lightblue_1"
+        android:outlineSpotShadowColor="@color/lightblue_1"
+        />
+    <View
+
+        android:id="@+id/divider11"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+
+
+
+    <Button
+        android:id="@+id/request_auth_level_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/darkblue"
+        android:textSize="18sp"
+        android:text="request level change"
+        android:backgroundTint="@color/lightblue_1"
+        android:outlineSpotShadowColor="@color/lightblue_1"
+        />
+    <View
+
+        android:id="@+id/divider10"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Account management"
+        android:alpha=".7"
+        android:background="@color/lightblue_2"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:textColor="@color/darkblue"
+        android:textSize="24sp"
+        />
+
+    <View
+
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+
+    <Button
+        android:id="@+id/logout_normal_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/darkblue"
+        android:textSize="18sp"
+        android:text="LOGOUT"
+        android:backgroundTint="@color/lightblue_1"
+        android:outlineSpotShadowColor="@color/lightblue_1"
+        />
+
+    <View
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightblue" />
+    <Button
+        android:id="@+id/delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/darkblue"
+        android:textSize="18sp"
+        android:text="DELETE ACCOUNT"
+        android:backgroundTint="@color/lightblue_1"
+        android:outlineSpotShadowColor="@color/lightblue_1"
+
+        />
+    <View
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lightblue" />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

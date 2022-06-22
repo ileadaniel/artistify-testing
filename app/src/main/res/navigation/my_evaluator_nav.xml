@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_evaluator_nav"
+    app:startDestination="@id/contestsEvaluatorFragment">
+
+    <fragment
+        android:id="@+id/contestsEvaluatorFragment"
+        android:name="com.example.artistify.Evaluator.ContestsEvaluatorFragment"
+        android:label="fragment_contests_evaluator"
+        tools:layout="@layout/fragment_contests_evaluator" />
+    <fragment
+        android:id="@+id/exhibitionsEvaluatorFragment"
+        android:name="com.example.artistify.Evaluator.ExhibitionsEvaluatorFragment"
+        android:label="fragment_exhibitions_evaluator"
+        tools:layout="@layout/fragment_exhibitions_evaluator" />
+    <fragment
+        android:id="@+id/profileEvaluatorFragment"
+        android:name="com.example.artistify.Evaluator.ProfileEvaluatorFragment"
+        android:label="fragment_profile_evaluator"
+        tools:layout="@layout/fragment_profile_evaluator" />
+</navigation>

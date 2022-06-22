@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColor">@color/darkblue</item>
+        <item name="android:searchIcon">@color/darkblue</item>
+        <item name="android:editTextColor">@color/darkblue</item>
+        <item name="android:textColorHint">@color/darkblue</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/lightblue_1</item>
+        <item name="android:buttonTint">@color/darkblue</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="fontFamily">@font/regular</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="colorOnSurface">@color/darkblue</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/lightblue</item>
+        <item name="android:windowBackground">@color/lightblue_1</item>
+        <item name="colorPrimaryDark">@color/lightblue</item>
+        <item name="android:colorControlActivated">@color/darkblue_1</item>
+        <item name="colorAccent">@color/darkblue</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DatePickerButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DatePickerButtonStyle</item>
+
+    </style>
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/darkblue</item>
+        <item name="android:colorControlNormal">@color/lightblue_1</item>
+    </style>
+
+
+</resources>

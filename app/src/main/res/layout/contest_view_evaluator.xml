@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    app:cardCornerRadius="5dp"
+    android:elevation="90dp"
+
+    android:layout_margin="8dp"
+    android:id="@+id/card_view_contests_created">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:background="@color/lightblue_white"
+        android:gravity="center_horizontal"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/contest_image_evaluator"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/ic_exhibitions1" />
+            <ProgressBar
+                android:id="@+id/progress_image_loader"
+                android:layout_margin="30sp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/contest_title_evaluator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:hint="Title of contest"
+                android:fontFamily="@font/bold"
+                android:textSize="18sp"
+                android:textColor="@color/darkblue"
+                android:textColorHint="@color/darkblue"
+                />
+
+            <View
+                android:id="@+id/divider23"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+            <TextView
+                android:id="@+id/contest_description_evaluator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:lines="2"
+                android:minLines="2"
+                android:hint="Contest description"
+                android:fontFamily="@font/regular"
+                android:textSize="18sp"
+                android:textColor="@color/darkblue_1"
+                android:textColorHint="@color/darkblue_1"
+                />
+            <View
+                android:id="@+id/divider24"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.1"
+                        android:text="Category"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue"
+
+                        />
+                   <TextView
+                       android:id="@+id/contest_category_evaluator"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="0.7"
+                       android:layout_marginBottom="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginLeft="5dp"
+                       android:hint="Category"
+                       android:textColorHint="@color/darkblue_1"
+                       android:gravity="center"
+                       android:textSize="14sp"
+                       android:fontFamily="@font/regular"
+                       android:textColor="@color/darkblue_1"
+                       />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider25"
+                    android:layout_width="0.7dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:alpha="0.6"
+                    android:background="@color/lightblue" />
+
+
+
+                <LinearLayout
+                    android:layout_weight="0.7"
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.1"
+                        android:text="Status"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue"
+                        />
+
+                    <TextView
+                        android:id="@+id/contest_status_evaluator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:hint="Status"
+                        android:textColorHint="@color/darkblue_1"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue_1"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/darkblue_1"
+                android:gravity="center"
+
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Your role: "
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_margin="10dp"
+                    android:textSize="17sp"
+                    />
+
+                <TextView
+                    android:id="@+id/evaluator_role"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/white"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/regular"
+                        android:text="Time left"
+                        android:textColor="@color/darkblue"
+                        android:textSize="17sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/contest_time_left_evaluator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:hint="no time set"
+                        android:textColor="@color/darkblue_1"
+                        android:textColorHint="@color/darkblue_1"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider27"
+                    android:layout_width="0.7dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:alpha="0.6"
+                    android:background="@color/lightblue" />
+
+                <TextView
+                    android:id="@+id/more_less_info_evaluator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+
+                    android:drawableRight="@drawable/expand_card"
+                    android:fontFamily="@font/regular"
+                    android:text="More info"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="17sp"
+
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/expandable_view_evaluator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            >
+
+            <View
+                android:id="@+id/divider18"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_margin="5dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="Contest entries"
+                android:textColor="@color/darkblue"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center|start"
+                android:text="Important! You can vote only when time for entries is finished."
+                android:textColor="@color/darkblue_1"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Number of contest entries:"
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/entries_number_evaluator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center|start"
+                android:text="To view or vote the contest entries click below."
+                android:textColor="@color/darkblue_1"
+                android:textSize="15sp" />
+
+
+            <Button
+                android:id="@+id/view_vote_entries_evaluator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/darkblue"
+                android:shadowColor="@color/darkblue"
+                android:text="View/vote entries"
+                android:textColor="@color/lightblue_white" />
+
+
+            <LinearLayout
+                android:id="@+id/contest_appeals_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+
+                >
+
+                <View
+                    android:id="@+id/divider19"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:layout_margin="5dp"
+                    android:alpha="0.6"
+                    android:background="@color/lightblue" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center"
+                    android:text="Contest appeals"
+                    android:textColor="@color/darkblue"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:text="Important! You can vote only when contest status is set to Appeals."
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center|start"
+                        android:text="Pending appeals:"
+                        android:textColor="@color/darkblue"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/pending_appeals_number_evaluator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center|start"
+                        android:textColor="@color/darkblue_1"
+                        android:textSize="13sp" />
+
+                    <View
+                        android:id="@+id/divider28"
+                        android:layout_width="0.7dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:alpha="0.6"
+                        android:background="@color/lightblue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center|start"
+                        android:text="Answered appeals:"
+                        android:textColor="@color/darkblue"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/appeals_answered_number_evaluator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/bold"
+                        android:gravity="center|start"
+                        android:textColor="@color/darkblue_1"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/regular"
+                    android:gravity="center|start"
+                    android:text="To view or vote the contest appeals click below."
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+
+                <Button
+                    android:id="@+id/view_vote_appeals_evaluator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/darkblue"
+                    android:shadowColor="@color/darkblue"
+                    android:text="View/vote appeals"
+                    android:textColor="@color/lightblue_white" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

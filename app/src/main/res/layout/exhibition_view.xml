@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    app:cardCornerRadius="5dp"
+
+    android:layout_margin="8dp"
+    android:id="@+id/card_view_exhibitions">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:background="@color/lightblue_white"
+        android:gravity="center_horizontal"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/contest_image_exhibition"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/ic_exhibitions1" />
+            <ProgressBar
+                android:id="@+id/progress_image_loader"
+                android:layout_margin="30sp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/contest_title_exhibition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:hint="Title of contest"
+                android:fontFamily="@font/bold"
+                android:textSize="18sp"
+                android:textColor="@color/darkblue"
+                android:textColorHint="@color/darkblue"
+                />
+
+            <View
+                android:id="@+id/divider23"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+            <TextView
+                android:id="@+id/contest_description_exhibition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:lines="2"
+                android:minLines="2"
+                android:hint="Contest description"
+                android:fontFamily="@font/regular"
+                android:textSize="18sp"
+                android:textColor="@color/darkblue_1"
+                android:textColorHint="@color/darkblue_1"
+                />
+            <View
+                android:id="@+id/divider24"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       android:layout_margin="10dp"
+                        android:text="Category"
+                        android:textSize="17sp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/darkblue"
+
+                        />
+                   <TextView
+                       android:id="@+id/contest_category_exhibition"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+
+                       android:layout_margin="10dp"
+                       android:hint="Category"
+                       android:textColorHint="@color/darkblue_1"
+                       android:gravity="center"
+                       android:textSize="16sp"
+                       android:fontFamily="@font/regular"
+                       android:textColor="@color/darkblue_1"
+                       />
+
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider26"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/regular"
+                        android:text="End date"
+                        android:textColor="@color/darkblue"
+                        android:textSize="17sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/contest_end_time_exhibition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center"
+                        android:hint="no time set"
+                        android:textColor="@color/darkblue_1"
+                        android:textColorHint="@color/darkblue_1"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/divider28"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:alpha="0.3"
+                android:background="@color/lightblue" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/view_hide_winners"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:gravity="center_horizontal"
+                    android:drawableRight="@drawable/expand_card"
+                    android:fontFamily="@font/regular"
+                    android:text="View winners"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="17sp"
+
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/expandable_view_winners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            >
+
+            <View
+                android:id="@+id/divider18"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_margin="5dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:text="Winners"
+                android:textColor="@color/darkblue"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/linear_first_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="First place: "
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/first_place_winner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView_expand_1st_winner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        app:srcCompat="@drawable/expand_card" />
+
+
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/frame_1"
+                >
+                <ImageView
+                    android:id="@+id/first_place_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    tools:srcCompat="@drawable/ic_exhibitions1" />
+                <ProgressBar
+                    android:id="@+id/progress_image_loader_pic1"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+
+
+            <View
+                android:id="@+id/divider19"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_margin="5dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_second_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Second place: "
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/second_place_winner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/imageView_expand_2nd_winner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:srcCompat="@drawable/expand_card" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/second_place_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    tools:srcCompat="@drawable/ic_exhibitions1" />
+                <ProgressBar
+                    android:id="@+id/progress_image_loader_pic2"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+
+            <View
+                android:id="@+id/divider20"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_margin="5dp"
+                android:alpha="0.6"
+                android:background="@color/lightblue" />
+
+            <LinearLayout
+                android:id="@+id/linear_special_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:text="Special place: "
+                    android:textColor="@color/darkblue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/special_place_winner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/bold"
+                    android:gravity="center|start"
+                    android:textColor="@color/darkblue_1"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/imageView_expand_special_place_winner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    app:srcCompat="@drawable/expand_card" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/special_place_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone"
+                    tools:srcCompat="@drawable/ic_exhibitions1" />
+                <ProgressBar
+                    android:id="@+id/progress_image_loader_pic3"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

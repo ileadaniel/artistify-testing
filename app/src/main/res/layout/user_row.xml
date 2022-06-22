@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    android:elevation="90dp"
+    android:layout_margin="8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal"
+        android:background="@color/lightblue_white"
+        android:gravity="center"
+    >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+
+                android:scaleType="centerCrop"
+                app:civ_border_color="@color/darkblue"
+                app:civ_border_width="2dp" />
+
+            <ProgressBar
+                android:id="@+id/progress_image_loader"
+                android:layout_margin="10sp"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/user_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/darkblue"
+                android:textSize="12sp"
+
+                />
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/darkblue"
+                />
+            <TextView
+                android:id="@+id/user_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/darkblue"
+                />
+
+            <TextView
+                android:id="@+id/review_request_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@drawable/button"
+                android:drawableRight="@drawable/request_more_info"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Review requested"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone"
+                app:backgroundTint="@color/darkblue" />
+            <TextView
+                android:id="@+id/level_change_request_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:background="@drawable/button"
+                android:drawableRight="@drawable/request_more_info"
+                android:fontFamily="@font/bold"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Change requested"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone"
+                app:backgroundTint="@color/darkblue" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/regular"
+                android:text="Status"
+                android:textColor="@color/darkblue"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/user_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:fontFamily="@font/regular"
+                android:textColor="@color/darkblue"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/Manage_user"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/bold"
+                android:text="Manage"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                app:backgroundTint="@color/darkblue_1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

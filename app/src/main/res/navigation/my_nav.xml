@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/usersFragment">
+
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.artistify.Admin.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" />
+    <fragment
+        android:id="@+id/contestsFragment"
+        android:name="com.example.artistify.Admin.ContestsFragment"
+        android:label="fragment_contests"
+        tools:layout="@layout/fragment_contests" />
+    <fragment
+        android:id="@+id/exhibitionsFragment"
+        android:name="com.example.artistify.Admin.ExhibitionsFragment"
+        android:label="fragment_exhibitions"
+        tools:layout="@layout/fragment_exhibitions" />
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="com.example.artistify.Admin.AdminProfileFragment"
+        android:label="fragment_admin_profile"
+        tools:layout="@layout/fragment_admin_profile" />
+</navigation>
